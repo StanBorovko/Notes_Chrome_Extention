@@ -14,5 +14,16 @@
   },
   "permissions": [
     "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "./static/js/content.js"
+      ]
+    }
   ]
 }
