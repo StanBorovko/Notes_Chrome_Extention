@@ -1,5 +1,5 @@
 export type DOMMessage = {
-  type: 'GET_DOM'
+  payload: string
 }
 
 export type DOMMessageResponse = {
