@@ -1,9 +1,17 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import * as chrome from "sinon-chrome";
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/SEO Extension built with React!/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("App testing", () => {
+  beforeAll(() => {
+    // @ts-ignore
+    global.chrome = chrome
+  })
+
+  test('render app', () => {
+    render(<App />);
+    const linkElement = screen.getByText(/Hello to Notes chrome extension/i);
+    expect(linkElement).toBeInTheDocument();
+  });
+})
