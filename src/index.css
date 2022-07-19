@@ -13,7 +13,24 @@ code {
 }
 
 .note-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
     width: 300px;
-    height: 250px;
     background: #ffe2a0;
+    border: 1px solid slategray;
+}
+
+.note-title {
+    padding: 4px;
+    font-size: 2rem;
+    border-bottom: 1px solid slategray;
+}
+
+.note-text {
+    min-height: 150px;
+    max-height: 250px;
+    overflow: scroll;
+    padding: 4px;
+    font-size: 1.125rem;
 }
